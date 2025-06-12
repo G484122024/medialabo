@@ -46,6 +46,13 @@ p {
   margin: 10px 0 20px;
 }
 
+a {
+  color: #6366f1; /* indigo-500 */
+  transition: color 0.3s ease;
+}
+a:hover {
+  color: #4f46e5; /* indigo-600 */
+}
 
 img {
   max-width: 100%;
