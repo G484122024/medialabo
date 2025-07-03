@@ -12,8 +12,42 @@ function print(data) {
 
 // 課題5-1 の関数 printDom() はここに記述すること
 function printDom(data) {
+  let oldResult = document.querySelector("#result");
+  if (oldResult) oldResult.remove();
 
+  let resultDiv = document.createElement("div");
+  resultDiv.id = "result";
+  document.body.appendChild(resultDiv);
+
+  let name = document.createElement("p");
+  name.textContent = "都市名: " + data.name;
+  resultDiv.appendChild(name);
+
+  let weather = document.createElement("p");
+  weather.textContent = "天気: " + data.weather[0].description;
+  resultDiv.appendChild(weather);
+
+  let tempMin = document.createElement("p");
+  tempMin.textContent = "最低気温: " + data.main.temp_min + "℃";
+  resultDiv.appendChild(tempMin);
+
+  let tempMax = document.createElement("p");
+  tempMax.textContent = "最高気温: " + data.main.temp_max + "℃";
+  resultDiv.appendChild(tempMax);
+
+  let humidity = document.createElement("p");
+  humidity.textContent = "湿度: " + data.main.humidity + "%";
+  resultDiv.appendChild(humidity);
+
+  let windSpeed = document.createElement("p");
+  windSpeed.textContent = "風速: " + data.wind.speed + " m/s";
+  resultDiv.appendChild(windSpeed);
+
+  let windDeg = document.createElement("p");
+  windDeg.textContent = "風向: " + data.wind.deg + "°";
+  resultDiv.appendChild(windDeg);
 }
+
 
 // 課題6-1 のイベントハンドラ登録処理は以下に記述
 let btn = document.querySelector("#searchBtn");
