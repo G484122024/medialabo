@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <link rel="stylesheet" href="project.css">
   <meta charset="utf-8">
   <title>世界の天気（検索結果1件）</title>
+  <link rel="stylesheet" href="project.css">
   <script src="weather.js" defer></script>
 </head>
 <body>
@@ -11,10 +11,28 @@
   <h1>世界の天気</h1>
 
   <p>
-  <label for="searchBox">検索：</label>
-  <input type="search" id="searchBox" placeholder="キーワードを入力">
-  <button id="searchBtn">検索</button>
-</p>
+    <label for="searchBox">検索：</label>
+    <input type="search" id="searchBox" placeholder="都市IDを入力（例: 1850147）">
+    <button id="searchBtn">検索</button>
+  </p>
+
+  <div id="cityDropdown">
+    <div id="cityTrigger">都市ID参考一覧 ▾</div>
+    <ul id="cityMenu">
+      <li data-id="360630">Cairo カイロ（エジプト）</li>
+      <li data-id="524901">Moscow モスクワ（ロシア）</li>
+      <li data-id="993800">Johannesburg ヨハネスブルク（南アフリカ）</li>
+      <li data-id="1816670">Beijing 北京（中国）</li>
+      <li data-id="1850147">Tokyo 東京（日本）</li>
+      <li data-id="1880252">Singapore シンガポール</li>
+      <li data-id="2147714">Sydney シドニー</li>
+      <li data-id="2643743">London ロンドン</li>
+      <li data-id="2968815">Paris パリ</li>
+      <li data-id="3451189">Rio de Janeiro リオデジャネイロ</li>
+      <li data-id="5128581">New York ニューヨーク</li>
+      <li data-id="5368361">Los Angeles ロサンゼルス</li>
+    </ul>
+  </div>
 
   <div id="result"></div>
 
